@@ -123,9 +123,9 @@ function parseJsonToRawMap(jsonString: string): Map<string, string> {
   }
 
   function readString(index: i32, input: string): ParseResult {
-    if (input.charCodeAt(index) !== 34) {
+    /* if (input.charCodeAt(index) !== 34) {
       throw new Error("Expected '\"' at position " + index.toString());
-    }
+    } */
     index++;
     let result = "";
     while (index < input.length) {
@@ -184,9 +184,9 @@ function parseJsonToRawMap(jsonString: string): Map<string, string> {
     i = keyResult.nextIndex;
 
     i = skipWhitespace(i, jsonString);
-    if (jsonString.charCodeAt(i) !== 58) {
+    /* if (jsonString.charCodeAt(i) !== 58) {
       throw new Error("Expected ':' after key at position " + i.toString());
-    }
+    } */
     i++;
 
     i = skipWhitespace(i, jsonString);
